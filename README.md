@@ -90,6 +90,8 @@ Then navigate to `http://127.0.0.1:8000/` in your browser.
 ### Web Deployment
 Hosted on Render's free tier — if idle for 15+ minutes, the first request may take up to ~50s to respond while the instance spins up.
 
+*Note: Render may default to an unstable Python runtime (like Python 3.14) which fails to compile spaCy's native dependencies. We have included `.python-version` and `runtime.txt` pinning the project to Python `3.10.11`. If needed, you can also set the Environment Variable `PYTHON_VERSION` to `3.10.11` on your Render service dashboard.*
+
 ---
 
 ## Observed Limitations & False Positives/Negatives

@@ -1,0 +1,467 @@
+[
+  {
+    "page_id": "page_1_promoters",
+    "text": "Our Promoters\nKushal Subbayya Hegde, Pushpa Kushal Hegde, Rajesh Kushal Hegde, Rohit Kushal Hegde, Rakhi Girija Shetty, Dhaulagiri Family Trust, Everest Family Trust, Makalu Family Trust, Broad Family Trust, Annapurna Family Trust, Kanchenjunga Family Trust and Waterloo Industrial Park VI Private Limited are the Promoters of our Company.\nFor further details, see \u201cOur Promoters and Promoter Group\u201d on page 269.",
+    "spans": [
+      {
+        "start": 14,
+        "end": 35,
+        "type": "PERSON",
+        "text": "Kushal Subbayya Hegde"
+      },
+      {
+        "start": 37,
+        "end": 56,
+        "type": "PERSON",
+        "text": "Pushpa Kushal Hegde"
+      },
+      {
+        "start": 58,
+        "end": 77,
+        "type": "PERSON",
+        "text": "Rajesh Kushal Hegde"
+      },
+      {
+        "start": 79,
+        "end": 97,
+        "type": "PERSON",
+        "text": "Rohit Kushal Hegde"
+      },
+      {
+        "start": 99,
+        "end": 118,
+        "type": "PERSON",
+        "text": "Rakhi Girija Shetty"
+      },
+      {
+        "start": 120,
+        "end": 143,
+        "type": "COMPANY",
+        "text": "Dhaulagiri Family Trust"
+      },
+      {
+        "start": 145,
+        "end": 165,
+        "type": "COMPANY",
+        "text": "Everest Family Trust"
+      },
+      {
+        "start": 167,
+        "end": 186,
+        "type": "COMPANY",
+        "text": "Makalu Family Trust"
+      },
+      {
+        "start": 188,
+        "end": 206,
+        "type": "COMPANY",
+        "text": "Broad Family Trust"
+      },
+      {
+        "start": 208,
+        "end": 230,
+        "type": "COMPANY",
+        "text": "Annapurna Family Trust"
+      },
+      {
+        "start": 232,
+        "end": 257,
+        "type": "COMPANY",
+        "text": "Kanchenjunga Family Trust"
+      },
+      {
+        "start": 262,
+        "end": 305,
+        "type": "COMPANY",
+        "text": "Waterloo Industrial Park VI Private Limited"
+      }
+    ]
+  },
+  {
+    "page_id": "page_2_contact",
+    "text": "Corporate Office: 201, Tower 2, Montreal Business Centre, Off Pallod Farms, Baner, Pune \u2013 411 045, Maharashtra, India;\nContact Person: Sarthak Malvadkar, Company Secretary and Compliance Officer; Telephone: + 91 20 4505 3237;\nE-mail: cs.connect@kshinternational.com; Website: www.kshinternational.com",
+    "spans": [
+      {
+        "start": 135,
+        "end": 152,
+        "type": "PERSON",
+        "text": "Sarthak Malvadkar"
+      },
+      {
+        "start": 234,
+        "end": 265,
+        "type": "EMAIL",
+        "text": "cs.connect@kshinternational.com"
+      },
+      {
+        "start": 18,
+        "end": 117,
+        "type": "ADDRESS",
+        "text": "201, Tower 2, Montreal Business Centre, Off Pallod Farms, Baner, Pune \u2013 411 045, Maharashtra, India"
+      }
+    ]
+  },
+  {
+    "page_id": "page_3_director_1",
+    "text": "Name: Kushal Subbayya Hegde\nDesignation: Chairman\tand\tExecutive Director\nDIN: 00135070\nAddress: S. no. 245/ 104, Pushpakamal, Deccan Gymkhana Society, lane no. 3 Prabhat Road, opposite PYC basketball court, Deccan Gymkhana, Pune \u2013 411 004 Maharashtra, India",
+    "spans": [
+      {
+        "start": 6,
+        "end": 27,
+        "type": "PERSON",
+        "text": "Kushal Subbayya Hegde"
+      },
+      {
+        "start": 96,
+        "end": 257,
+        "type": "ADDRESS",
+        "text": "S. no. 245/ 104, Pushpakamal, Deccan Gymkhana Society, lane no. 3 Prabhat Road, opposite PYC basketball court, Deccan Gymkhana, Pune \u2013 411 004 Maharashtra, India"
+      }
+    ]
+  },
+  {
+    "page_id": "page_4_director_2",
+    "text": "Name: Rajesh Kushal Hegde\nDesignation: Managing Director\nDIN: 00114193\nAddress: 12 Buena Monte, NCL co-operative housing society, Panchvati, Pashan, Pune \u2013 411 008, Maharashtra, India",
+    "spans": [
+      {
+        "start": 6,
+        "end": 25,
+        "type": "PERSON",
+        "text": "Rajesh Kushal Hegde"
+      },
+      {
+        "start": 80,
+        "end": 183,
+        "type": "ADDRESS",
+        "text": "12 Buena Monte, NCL co-operative housing society, Panchvati, Pashan, Pune \u2013 411 008, Maharashtra, India"
+      }
+    ]
+  },
+  {
+    "page_id": "page_5_registrar",
+    "text": "Registrar to the Offer\nMUFG Intime India Private Limited (Formerly Link Intime India Private Limited) C-101, Embassy 247\n1st Floor, L B S Marg, Vikhroli (West) Mumbai 400083, (Maharashtra), India Telephone: +91 81081 14949\nE-mail: kshinternational.ipo@in.mpms.mufg.com\nInvestor grievance E-mail: kshinternational.ipo@in.mpms.mufg.com\nWebsite: www.in.mpms.mufg.com Contact Person: Shanti Gopalkrishnan SEBI Registration No.: INR000004058",
+    "spans": [
+      {
+        "start": 23,
+        "end": 56,
+        "type": "COMPANY",
+        "text": "MUFG Intime India Private Limited"
+      },
+      {
+        "start": 67,
+        "end": 100,
+        "type": "COMPANY",
+        "text": "Link Intime India Private Limited"
+      },
+      {
+        "start": 380,
+        "end": 400,
+        "type": "PERSON",
+        "text": "Shanti Gopalkrishnan"
+      },
+      {
+        "start": 207,
+        "end": 222,
+        "type": "PHONE",
+        "text": "+91 81081 14949"
+      },
+      {
+        "start": 231,
+        "end": 268,
+        "type": "EMAIL",
+        "text": "kshinternational.ipo@in.mpms.mufg.com"
+      },
+      {
+        "start": 296,
+        "end": 333,
+        "type": "EMAIL",
+        "text": "kshinternational.ipo@in.mpms.mufg.com"
+      },
+      {
+        "start": 102,
+        "end": 195,
+        "type": "ADDRESS",
+        "text": "C-101, Embassy 247\n1st Floor, L B S Marg, Vikhroli (West) Mumbai 400083, (Maharashtra), India"
+      }
+    ]
+  },
+  {
+    "page_id": "page_6_banker",
+    "text": "Bankers to the Offer Escrow Collection Bank HDFC Bank Limited\nHDFC Bank Limited, FIG-OPS Department \u2013 Lodha I Think Techno Campus, O-3 Level\nNext to Kanjurmarg Railway Station, Kanjurmarg (East) Mumbai \u2013 400042, Maharashtra, India\nTelephone: +91 22 30752929, +91 22 30752928 and +91 22 30752914\nEmail: siddharth.jadhav@hdfcbank.com, sachin.gawade@hdfcbank.com eric.bacha@hdfcbank.com, tushar.gavankar@hdfcbank.com, and pravin.teli2@hdfcbank.com Website: www.hdfcbank.com\nContact Person: Eric Bacha/ Sachin Gawade/ Pravin Teli/ Siddharth Jadhav/ Tushar Gavankar",
+    "spans": [
+      {
+        "start": 44,
+        "end": 61,
+        "type": "COMPANY",
+        "text": "HDFC Bank Limited"
+      },
+      {
+        "start": 62,
+        "end": 79,
+        "type": "COMPANY",
+        "text": "HDFC Bank Limited"
+      },
+      {
+        "start": 487,
+        "end": 497,
+        "type": "PERSON",
+        "text": "Eric Bacha"
+      },
+      {
+        "start": 499,
+        "end": 512,
+        "type": "PERSON",
+        "text": "Sachin Gawade"
+      },
+      {
+        "start": 514,
+        "end": 525,
+        "type": "PERSON",
+        "text": "Pravin Teli"
+      },
+      {
+        "start": 527,
+        "end": 543,
+        "type": "PERSON",
+        "text": "Siddharth Jadhav"
+      },
+      {
+        "start": 545,
+        "end": 560,
+        "type": "PERSON",
+        "text": "Tushar Gavankar"
+      },
+      {
+        "start": 242,
+        "end": 257,
+        "type": "PHONE",
+        "text": "+91 22 30752929"
+      },
+      {
+        "start": 259,
+        "end": 274,
+        "type": "PHONE",
+        "text": "+91 22 30752928"
+      },
+      {
+        "start": 279,
+        "end": 294,
+        "type": "PHONE",
+        "text": "+91 22 30752914"
+      },
+      {
+        "start": 302,
+        "end": 331,
+        "type": "EMAIL",
+        "text": "siddharth.jadhav@hdfcbank.com"
+      },
+      {
+        "start": 333,
+        "end": 359,
+        "type": "EMAIL",
+        "text": "sachin.gawade@hdfcbank.com"
+      },
+      {
+        "start": 360,
+        "end": 383,
+        "type": "EMAIL",
+        "text": "eric.bacha@hdfcbank.com"
+      },
+      {
+        "start": 385,
+        "end": 413,
+        "type": "EMAIL",
+        "text": "tushar.gavankar@hdfcbank.com"
+      },
+      {
+        "start": 419,
+        "end": 444,
+        "type": "EMAIL",
+        "text": "pravin.teli2@hdfcbank.com"
+      },
+      {
+        "start": 102,
+        "end": 230,
+        "type": "ADDRESS",
+        "text": "Lodha I Think Techno Campus, O-3 Level\nNext to Kanjurmarg Railway Station, Kanjurmarg (East) Mumbai \u2013 400042, Maharashtra, India"
+      }
+    ]
+  },
+  {
+    "page_id": "page_7_auditor",
+    "text": "Our Company has received the written consent dated November 27, 2025 from our Statutory Auditors, Kirtane & Pandit, LLP, Chartered Accountants, to include their name as required under section 26 (5) of the Companies Act, 2013 read with SEBI ICDR Regulations, in this Red Herring Prospectus and as an \u201cexpert\u201d as defined under section 2(38) of the Companies Act, 2013, to the extent and in their capacity as our Statutory Auditors, and in respect of their (i) examination report dated October 18, 2025 on the Restated Financial Statements; and (ii) the statement of special tax benefits available to the Company and its shareholders under the direct and indirect tax laws in India dated November 27, 2025, included in this Red Herring Prospectus and (iii) any other certificates as may be required for the purposes of the Offer, and such consent has not been withdrawn as on the date of this Red Herring Prospectus. However, the terms \u201cexpert\u201d and \u201cconsent\u201d do not represent an \u201cexpert\u201d or \u201cconsent\u201d within the meaning under the U.S. Securities Act.\nKirtane & Pandit, LLP, Chartered Accountants",
+    "spans": [
+      {
+        "start": 98,
+        "end": 119,
+        "type": "COMPANY",
+        "text": "Kirtane & Pandit, LLP"
+      },
+      {
+        "start": 1049,
+        "end": 1070,
+        "type": "COMPANY",
+        "text": "Kirtane & Pandit, LLP"
+      }
+    ]
+  },
+  {
+    "page_id": "page_8_share_acq",
+    "text": "Promoters\nKushal Subbayya Hegde*^&\nFebruary 21, 2025\n21,363,680\n5",
+    "spans": [
+      {
+        "start": 10,
+        "end": 31,
+        "type": "PERSON",
+        "text": "Kushal Subbayya Hegde"
+      }
+    ]
+  },
+  {
+    "page_id": "page_9_neg_financials",
+    "text": "Particulars\nThree-month period ended June 30, 2025\nFiscal 2025\nFiscal 2024\nFiscal 2023\nRevenue from top 10 customers (\u20b9 in million)",
+    "spans": []
+  },
+  {
+    "page_id": "page_10_neg_risk1",
+    "text": "We cannot assure you that any Director who may be interested in the future, would always exercise their rights as Shareholders to the benefit and best interest of our Company. As a result, such Director in the future will continue to exercise significant control over our Company, including being able to control the composition of our Board of Directors and determine decisions requiring simple or special majority voting, and our other Shareholders may be unable to affect the outcome of such voting. Such interested Director in the future may take or block actions with respect to our business, which may conflict with our best interests or the interests of other minority Shareholders, such as actions with respect to future capital raising or acquisitions. We cannot assure you that such interested Director in the future will always act to resolve any conflicts of interest in our favour, thereby adversely affecting our business and results of operations and prospects.",
+    "spans": []
+  },
+  {
+    "page_id": "page_11_neg_risk2",
+    "text": "We have in the past entered into transactions with several related parties. For details regarding our related party transactions for the Fiscals 2025, 2024, 2023 and for the three-month period ended June 30, 2025, see \u201cSummary of the Offer Document \u2013 Summary of related party transactions\u201d and \u201cOther Financial Information \u2013 Related Party Transactions\u201d on pages 24 and 355, respectively. While all such related party transactions that we have entered into have been undertaken at arms\u2019 length basis in accordance with applicable laws, we cannot assure you these arrangements or any future related party transactions that we may enter into, individually or in the aggregate, will not have an adverse effect on our business, financial condition, results of operations, cash flows and prospects. Although all related-party transactions that we may enter into will be subject to Audit Committee, Board or shareholder approval, as may be required under the Companies Act, 2013 and the SEBI Listing Regulations and the circulars issued by the SEBI in this regard, we cannot assure you that such transactions, individually or in the aggregate, will not have an adverse effect on our financial condition and results of operations or that our Company could not have undertaken such transactions on more favorable terms with any unrelated parties. We cannot assure you that any dispute that may arise between us and related parties will be resolved in our favour.",
+    "spans": []
+  },
+  {
+    "page_id": "page_12_exemptions",
+    "text": "KSH INTERNATIONAL LIMITED\nOur Company was originally incorporated as \u201cBhandary Metal Extrusion Private Limited\u201d under the provisions of the Companies Act, 1956, pursuant to a certificate of incorporation dated July 30, 1979, issued by the Registrar of Companies, Maharashtra at Bombay. Subsequently, the name of our Company was changed from \u201cBhandary Metal Extrusion Private Limited\u201d to \u201cKSH International Private Limited\u201d pursuant to a resolution dated June 1, 1996 passed by our Board and a resolution dated June 24, 1996 passed by our shareholders, post which a fresh certificate of incorporation dated July 4, 1996 was issued by Registrar of Companies Maharashtra at Mumbai pursuant to change of name under the Companies Act, 1956. Further, pursuant to a special resolution passed by our Shareholders on January 13, 2011 which was confirmed by an order of the regional director dated August 16, 2011, the registered office of our Company was shifted from the jurisdiction of Registrar of Companies, Maharashtra at Mumbai to the jurisdiction of the Registrar of Companies, Maharashtra at Pune, and a certificate of registration of the order of regional director confirming transfer of the registered office within the same state was issued to us on October 13, 2011, by the RoC. On the conversion of our Company from a private limited company to a public limited company, pursuant to a resolution passed by our Board on December 11, 2024 and a special resolution passed by our Shareholders on December 19, 2024, the name of our Company was changed to \u201cKSH International Limited\u201d and a fresh certificate of incorporation was issued by the Registrar of Companies, Central Processing Centre on January 20, 2025. For further details of changes in the registered office of our Company, see \u201cHistory and Certain Corporate Matters- Change in our registered office\u201d on page 243.",
+    "spans": [
+      {
+        "start": 70,
+        "end": 110,
+        "type": "COMPANY",
+        "text": "Bhandary Metal Extrusion Private Limited"
+      },
+      {
+        "start": 342,
+        "end": 382,
+        "type": "COMPANY",
+        "text": "Bhandary Metal Extrusion Private Limited"
+      }
+    ]
+  },
+  {
+    "page_id": "page_13_unusual_companies",
+    "text": "Consent is received from Kanj & Co. LLP, practicing company secretaries.\nWe also work with Lalit Muljibhai Sarvaiya & Co. and M/s. Lalit Muljibhai Sarvaiya & Associates.",
+    "spans": [
+      {
+        "start": 25,
+        "end": 39,
+        "type": "COMPANY",
+        "text": "Kanj & Co. LLP"
+      },
+      {
+        "start": 91,
+        "end": 121,
+        "type": "COMPANY",
+        "text": "Lalit Muljibhai Sarvaiya & Co."
+      },
+      {
+        "start": 131,
+        "end": 168,
+        "type": "COMPANY",
+        "text": "Lalit Muljibhai Sarvaiya & Associates"
+      }
+    ]
+  },
+  {
+    "page_id": "page_14_split_address",
+    "text": "Company Registered Office details split across cells:\nCell 1: Registered Office: 11/3, 11/4 and 11/5, Village Birdewadi, Chakan Taluka - Khed\nCell 2: Pune \u2013 411 501 Maharashtra, India",
+    "spans": [
+      {
+        "start": 81,
+        "end": 141,
+        "type": "ADDRESS",
+        "text": "11/3, 11/4 and 11/5, Village Birdewadi, Chakan Taluka - Khed"
+      },
+      {
+        "start": 150,
+        "end": 183,
+        "type": "ADDRESS",
+        "text": "Pune \u2013 411 501 Maharashtra, India"
+      }
+    ]
+  },
+  {
+    "page_id": "page_15_casing_order",
+    "text": "The board meeting was attended by Hegde, Kushal Subbayya who signed the report.\nMrs. Pushpa Hegde was also present. Rajesh K. Hegde sent his apologies.",
+    "spans": [
+      {
+        "start": 34,
+        "end": 56,
+        "type": "PERSON",
+        "text": "Hegde, Kushal Subbayya"
+      },
+      {
+        "start": 85,
+        "end": 97,
+        "type": "PERSON",
+        "text": "Pushpa Hegde"
+      },
+      {
+        "start": 116,
+        "end": 131,
+        "type": "PERSON",
+        "text": "Rajesh K. Hegde"
+      }
+    ]
+  },
+  {
+    "page_id": "page_16_synthetic_pii",
+    "text": "Server administrator IP addresses: 192.168.1.100 and 2001:0db8:85a3:0000:0000:8a2e:0370:7334.\nCustomer representative details: SSN: 999-12-3456. Card number: 4111 1111 1111 1111.\nPersonal profile: Kushal Subbayya Hegde, date of birth: October 15, 1985. Born on: 12-04-1980.",
+    "spans": [
+      {
+        "start": 35,
+        "end": 48,
+        "type": "IP_ADDRESS",
+        "text": "192.168.1.100"
+      },
+      {
+        "start": 53,
+        "end": 92,
+        "type": "IP_ADDRESS",
+        "text": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+      },
+      {
+        "start": 132,
+        "end": 143,
+        "type": "SSN",
+        "text": "999-12-3456"
+      },
+      {
+        "start": 158,
+        "end": 177,
+        "type": "CREDIT_CARD",
+        "text": "4111 1111 1111 1111"
+      },
+      {
+        "start": 197,
+        "end": 218,
+        "type": "PERSON",
+        "text": "Kushal Subbayya Hegde"
+      },
+      {
+        "start": 235,
+        "end": 251,
+        "type": "DATE_OF_BIRTH",
+        "text": "October 15, 1985"
+      },
+      {
+        "start": 262,
+        "end": 272,
+        "type": "DATE_OF_BIRTH",
+        "text": "12-04-1980"
+      }
+    ]
+  }
+]

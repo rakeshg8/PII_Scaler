@@ -206,6 +206,8 @@ def is_heading(name_text: str) -> bool:
 
 def make_person_recognizer(seed_names):
     def recognize_person(text: str):
+        yielded_spans = set()
+        
         # 1. Exact seed-list matching
         for seed in seed_names:
             if not seed or len(seed.strip()) < 3:
@@ -224,6 +226,7 @@ def make_person_recognizer(seed_names):
                                 if last_word.lower() not in ["mr", "mrs", "ms", "dr", "shri", "smt", "km"]:
                                     continue
                 yield (match.start(), match.end(), "PERSON", match.group(0), 0.99)
+                yielded_spans.add((match.start(), match.end()))
 
         # 2. spaCy NER matching
         nlp = get_spacy_nlp()
@@ -238,7 +241,13 @@ def make_person_recognizer(seed_names):
                 # Skip if it contains typical company suffixes
                 if any(suffix in matched_text for suffix in ["Limited", "Ltd", "LLP", "Inc", "Trust", "Corporation", "Corp", "Industries", "Private"]):
                     continue
+                
+                # Check for exact duplicate span overlap
+                if (ent.start_char, ent.end_char) in yielded_spans:
+                    continue
+                    
                 yield (ent.start_char, ent.end_char, "PERSON", ent.text, 0.70)
+                yielded_spans.add((ent.start_char, ent.end_char))
     return recognize_person
 
 # COMPANY

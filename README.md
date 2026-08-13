@@ -78,11 +78,26 @@ No other code changes are needed!
 
 ---
 
+## Running Web App & Deployment
+
+### Running Web App
+To run the FastAPI web service locally:
+```bash
+uvicorn web.app:app --host 0.0.0.0 --port 8000
+```
+Then navigate to `http://127.0.0.1:8000/` in your browser.
+
+### Web Deployment
+Hosted on Render's free tier — if idle for 15+ minutes, the first request may take up to ~50s to respond while the instance spins up.
+
+---
+
 ## Observed Limitations & False Positives/Negatives
 
 - **Technical PII Hits**: The document contains no actual SSNs, credit cards, or IP addresses. These recognizers were validated using synthetic test cases in the test suite and evaluation scripts.
 - **Table Cell Boundaries (Address Recall FN)**: If a corporate address is split across cells (e.g., street details in Cell 1, city/PIN details in Cell 2), the tool only detects Cell 2 since the PIN code is located there; Cell 1 is missed. *Extension strategy (known limitation)*: When a PIN-anchored block is found near the start of a table cell with little preceding context, the system can be extended to check the immediately preceding sibling cell's text and merge it into the candidate block if not already claimed by another PII span.
 - **Slash-Separated lists (Person Recall FN)**: In contact lists formatted with slashes (e.g. `Contact Person: Eric Bacha/ Sachin Gawade/ Pravin Teli/ ...`), spaCy's token parser is confused by the slashes and misses the middle names (unless they are promoters listed in the seed list).
+- **Name Truncation (PERSON Recall FN)**: The small model `en_core_web_sm` occasionally truncates multi-token Indian names to the last 1-2 tokens (e.g., tagging `"Kushal Hegde"` instead of `"Rajesh Kushal Hegde"`). Names present in the promoter seed list are unaffected since they use exact string matching, not NER.
 - **spaCy ORG Span Over-extension (Company FP/FN)**: Trimming ORG matches longer than 60 characters and matching against suffix patterns reduced false positives significantly. However, some common legal definitions (e.g. `"Board of Directors"`, `"Statutory Auditors"`) are still occasionally flagged as corporate entities by spaCy NER.
 
 *(Note: Spaced PIN codes, list-aware telephone lists, and inverted name casing promoter seed list variants have been successfully resolved by the targeted heuristics in `src/recognizers.py` and `src/redactor.py`.)*

@@ -34,7 +34,7 @@ Each detected span is evaluated against the gold annotations:
 
 ## Performance Results
 
-Running the tool on the rebuilt gold dataset yields the following performance metrics:
+Running the tool on the rebuilt gold dataset (pinned to `spacy==3.7.5` and `en_core_web_sm==3.7.1`) yields the following performance metrics:
 
 | PII Type | TP | FP | FN | Precision | Recall | F1-Score |
 |---|---|---|---|---|---|---|
@@ -45,11 +45,11 @@ Running the tool on the rebuilt gold dataset yields the following performance me
 | **IP_ADDRESS** | 2 | 0 | 0 | 1.0000 | 1.0000 | 1.0000 |
 | **DATE_OF_BIRTH** | 2 | 0 | 0 | 1.0000 | 1.0000 | 1.0000 |
 | **ADDRESS** | 6 | 0 | 1 | 1.0000 | 0.8571 | 0.9231 |
-| **PERSON** | 16 | 0 | 3 | 1.0000 | 0.8421 | 0.9143 |
-| **COMPANY** | 14 | 15 | 4 | 0.4828 | 0.7778 | 0.5957 |
-| **Overall** | **54** | **15** | **8** | **0.7826** | **0.8710** | **0.8244** |
+| **PERSON** | 16 | 1 | 3 | 0.9412 | 0.8421 | 0.8889 |
+| **COMPANY** | 14 | 18 | 4 | 0.4375 | 0.7778 | 0.5600 |
+| **Overall** | **54** | **19** | **8** | **0.7397** | **0.8710** | **0.8000** |
 
-- **Token-level Accuracy**: **94.01%** (1,209 / 1,286 tokens correct)
+- **Token-level Accuracy**: **93.16%** (1,198 / 1,286 tokens correct)
 
 ---
 
@@ -57,25 +57,30 @@ Running the tool on the rebuilt gold dataset yields the following performance me
 
 ### 1. EMAIL, SSN, CREDIT_CARD, IP_ADDRESS, DATE_OF_BIRTH
 - **Observation**: Achieved perfect F1-score (1.0).
-- **Analysis**: Gating DOB detection by context triggers and validating credit card candidates using the Luhn algorithm prevents false positives. 
+- **Analysis**: These entities are highly structured. Luhn validation and trigger-phrase gating keep false positives at zero.
 
 ### 2. PHONE
 - **Observation**: Achieved perfect F1-score (1.0).
-- **Analysis**: List-aware context gating matches telephone numbers listed in lists (scanning forward from trigger labels until next trigger or sentence period), avoiding the previous false negative on long lists.
+- **Analysis**: List-aware context gating successfully scans forward from trigger labels in lists to match all numbers listed in a series.
 
 ### 3. ADDRESS
 - **Observation**: Precision = 1.0, Recall = 0.8571, F1 = 0.9231.
-- **Analysis (False Negative)**: 
-  - **Table Cell Boundaries**: The remaining missed address (FN=1) occurs on `page_14_split_address`, where the address text is split across sibling cells (`Cell 1: Registered Office: 11/3...` and `Cell 2: Pune – 411 501...`). Since the PIN code is in Cell 2, only Cell 2 is recognized, leaving Cell 1 un-redacted. This is a documented limitation of the system.
-  - **Spaced PIN Codes**: Spaced PIN code matching works correctly now (yielding TPs on `Pune – 411 045`, `Pune – 411 004`, `Pune – 411 008`).
+- **Analysis (False Negative)**: The only missed address is on `page_14_split_address`, where the address is split across cells. Since the PIN is in Cell 2, Cell 1 is missed. This is a documented limitation.
 
 ### 4. PERSON
-- **Observation**: Precision = 1.0, Recall = 0.8421, F1 = 0.9143.
-- **Analysis (False Negatives)**:
-  - **Slash-Separated Lists**: On `page_6_banker` (`Contact Person: Eric Bacha/ Sachin Gawade/ Pravin Teli/ Siddharth Jadhav/ Tushar Gavankar`), the middle names (`Sachin Gawade`, `Pravin Teli`, `Siddharth Jadhav`) are missed. This occurs because the slashes confuse spaCy's sentence and token parsing, and they are not promoters so they are not in the seed list.
-  - **Inverted Casing**: The inverted name `"Hegde, Kushal Subbayya"` is now perfectly matched and redacted due to generating name variants during promoter seed list construction. A lookup boundary prefix check successfully prevents inverted names from matching across list elements (crossover bug).
+- **Observation**: Precision = 0.9412, Recall = 0.8421, F1 = 0.8889.
+- **Analysis (False Negatives & False Positives)**:
+  - **Model Truncation**: On `page_15_casing_order`, the name `"Rajesh K. Hegde"` was missed (False Negative) because the middle initial `"K."` bypassed the exact promoter seed list, and spaCy NER missed it.
+  - **Role Misclassification**: On `page_2_contact`, `"Compliance Officer"` was incorrectly flagged as a `PERSON` by spaCy (False Positive).
+  - **Slashes**: Slashes (e.g. `Eric Bacha/ Sachin Gawade/...`) confuse sentence/token boundaries, causing middle list elements to be missed by spaCy.
+  - **Inverted Names**: `"Hegde, Kushal Subbayya"` is matched perfectly with 1.0 IoU due to inverted variant generation in the promoter seed booster.
 
 ### 5. COMPANY
-- **Observation**: Precision = 0.4828, Recall = 0.7778, F1 = 0.5957.
-- **Analysis (False Positives & False Negatives)**:
-  - **NER Over-extension**: Trimming spaCy ORG matches longer than 60 characters using the suffix regex and discarding them if no suffix is found successfully reduced COMPANY false positives from 24 down to 15. The remaining FPs represent short phrases (e.g. `"Board of Directors"`, `"Statutory Auditors"`) tagged as ORG by spaCy's legal/prospectus terminology confusion.
+- **Observation**: Precision = 0.4375, Recall = 0.7778, F1 = 0.5600.
+- **Analysis (False Positives & False Negatives)**: Trimming ORG matches > 60 chars reduced FPs significantly. Remaining FPs represent short legal role/body definitions (e.g. `"Audit Committee"`, `"Board of Directors"`) incorrectly flagged as corporate names by spaCy.
+
+---
+
+## Observed Model Limitations
+
+- **Name Truncation**: The small model `en_core_web_sm` occasionally truncates multi-token Indian names to the last 1-2 tokens (e.g. tagging `"Kushal Hegde"` instead of `"Rajesh Kushal Hegde"`). Names present in the promoter seed list are unaffected since they use exact string matching, not NER.

@@ -59,6 +59,9 @@ HTML_TEMPLATE = """
         </div>
         <button type="submit">Upload and Redact</button>
     </form>
+    <div style="margin-top: 20px; font-size: 13px; color: #666; text-align: center; line-height: 1.4;">
+        Note: Hosted on Render's free tier — if idle for 15+ minutes, the first request may take up to ~50s to respond while the instance spins up.
+    </div>
 </body>
 </html>
 """

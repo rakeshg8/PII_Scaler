@@ -58,7 +58,7 @@ def build_promoter_seeds(paragraphs):
                             inverted = f"{surname}, {given_names}"
                             promoter_names.add(inverted)
                         
-    logging.info(f"Extracted promoter seeds: Names: {promoter_names}, Orgs: {promoter_orgs}")
+    logging.info(f"Extracted promoter seeds: Names: {len(promoter_names)}, Orgs: {len(promoter_orgs)}")
     return promoter_names, promoter_orgs
 
 class Redactor:
